@@ -20,5 +20,5 @@ public class InterestedIn {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int userId;
-    private String interestedGander;
+    private String interestedGender;
 }
