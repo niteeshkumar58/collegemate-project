@@ -22,6 +22,7 @@ public class HomeController {
 
     @PostMapping(value = "/addNewUser")
     public UserData addNewUser(@RequestBody UserData userData){
+        System.out.println(userData);
         return userService.addNewUser(userData);
     }
 }
