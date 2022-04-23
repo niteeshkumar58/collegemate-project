@@ -23,12 +23,12 @@ public class College {
     private int id;
     private String courseName;
     private String collegeName;
-    @OneToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name = "user_id",
-            referencedColumnName = "userId"
-    )
-    private User user;
+//    @OneToOne(
+//            cascade = CascadeType.ALL
+//    )
+//    @JoinColumn(
+//            name = "user_id",
+//            referencedColumnName = "userId"
+//    )
+//    private User user;
 }

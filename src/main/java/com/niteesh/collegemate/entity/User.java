@@ -5,10 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -24,5 +22,29 @@ public class User {
     private int age;
     private String gender;
 
+    @OneToMany(targetEntity = College.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    private List<College> collegeList;
+
+    @OneToMany(targetEntity = Liked.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    @JoinColumn(name = "liked_by_user", referencedColumnName = "userId")
+    private List<Liked> likedList;
+
+    @OneToMany(targetEntity = Hobbies.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    private List<Hobbies> hobbiesList;
+
+    @OneToMany(targetEntity = InterestedIn.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    private List<InterestedIn> interestedInList;
+
+    @OneToMany(targetEntity = LikedBy.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    private List<LikedBy> likedByList;
+
+    @OneToMany(targetEntity = Work.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    private List<Work> workList;
 
 }

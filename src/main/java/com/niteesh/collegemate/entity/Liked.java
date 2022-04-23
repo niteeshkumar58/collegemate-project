@@ -24,22 +24,22 @@ public class Liked {
             generator = "custom_sequence_generator"
     )
     private int id;
-
-    @OneToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name = "liked_user_id",
-            referencedColumnName = "userId"
-    )
-    private User likedByUser;
-
-    @OneToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name = "user_id",
-            referencedColumnName = "userId"
-    )
-    private User user;
+//
+//    @OneToOne(
+//            cascade = CascadeType.ALL
+//    )
+//    @JoinColumn(
+//            name = "liked_user_id",
+//            referencedColumnName = "userId"
+//    )
+//    private User likedByUser;
+//
+//    @OneToOne(
+//            cascade = CascadeType.ALL
+//    )
+//    @JoinColumn(
+//            name = "user_id",
+//            referencedColumnName = "userId"
+//    )
+//    private User user;
 }

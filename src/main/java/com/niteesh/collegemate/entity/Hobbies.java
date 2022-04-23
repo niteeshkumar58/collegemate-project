@@ -25,16 +25,16 @@ public class Hobbies {
             strategy = GenerationType.SEQUENCE,
             generator = "custom_sequence_generator"
     )
-    int Id;
-
-    @OneToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name = "user_id",
-            referencedColumnName = "userId"
-    )
-    private User user;
+    int id;
+//
+//    @OneToOne(
+//            cascade = CascadeType.ALL
+//    )
+//    @JoinColumn(
+//            name = "user_id",
+//            referencedColumnName = "userId"
+//    )
+//    private User user;
 
     String hobby;
 }

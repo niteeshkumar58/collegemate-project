@@ -25,13 +25,13 @@ public class LikedBy {
     )
     private int id;
     private int likedByUserId;
-
-    @OneToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name = "user_id",
-            referencedColumnName = "userId"
-    )
-    private User user;
+//
+//    @OneToOne(
+//            cascade = CascadeType.ALL
+//    )
+//    @JoinColumn(
+//            name = "user_id",
+//            referencedColumnName = "userId"
+//    )
+//    private User user;
 }

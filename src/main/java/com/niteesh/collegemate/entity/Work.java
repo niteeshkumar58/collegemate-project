@@ -26,14 +26,14 @@ public class Work {
             generator = "custom_sequence_generator"
     )
     private int id;
-    @OneToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name = "user_id",
-            referencedColumnName = "userId"
-    )
-    private User user;
+//    @OneToOne(
+//            cascade = CascadeType.ALL
+//    )
+//    @JoinColumn(
+//            name = "user_id",
+//            referencedColumnName = "userId"
+//    )
+//    private User user;
     private String workName;
     private String workLocation;
 
